@@ -1,0 +1,144 @@
+/* Stile Globale per SIW-Prodotti */
+
+:root {
+    --background-dark: #1A1A2E;
+    --background-mid: #16213E;
+    --accent-purple: #7F5AF0;
+    --accent-cyan: #2CB67D;
+    --text-primary: #FFFFFE;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    padding-bottom: 50px; /* Spazio in fondo */
+}
+
+/* Stili Navbar */
+.navbar {
+    background-color: var(--background-dark);
+    border-bottom: 1px solid rgba(127, 90, 240, 0.3);
+}
+.navbar-brand {
+    font-family: 'Source Code Pro', monospace;
+    color: var(--accent-cyan) !important;
+    font-size: 1.8rem;
+}
+
+.nav-link-admin {
+    color: var(--accent-cyan) !important;
+    font-weight: bold;
+}
+
+/* Stili Generali per Titoli e Testi */
+h1, h2, h3, h4, h5 {
+    color: var(--accent-cyan);
+}
+h1 .accent-text, h2 .accent-text {
+    color: var(--accent-purple);
+}
+
+/* Stile specifico per l'H1 nella hero section della homepage */
+.hero-content h1 {
+    font-size: 4rem; /* Puoi aggiustare questo valore a tuo piacimento */
+    font-weight: 700;
+}
+
+/* Stili per le Card (Prodotti, Tipologie) */
+.product-card, .type-card {
+    background-color: var(--background-mid);
+    border: 1px solid rgba(127, 90, 240, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: var(--text-primary);
+    height: 100%;
+    text-decoration: none;
+}
+.product-card:hover, .type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(127, 90, 240, 0.2);
+    color: var(--text-primary);
+}
+.product-card .card-title, .type-card .card-title {
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+.product-card .card-img-top, .type-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    background-color: #333;
+}
+.product-price {
+    font-size: 1.25rem;
+}
+
+/* Stili Specifici per la Homepage (index.html) */
+.hero-body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.hero-container {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#bg-video {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover; z-index: 1; opacity: 0.25;
+}
+.hero-content {
+    position: relative; z-index: 2;
+}
+
+/* Stili per la Barra di Ricerca */
+.combined-search-form {
+    max-width: 800px; margin: 2rem auto; display: flex;
+    border: 2px solid var(--accent-purple); border-radius: 50px;
+    background-color: rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+.search-input {
+    border: none; background: transparent; color: var(--text-primary);
+    flex-grow: 1; 
+    padding: 1.1rem 1.8rem; /* Aumentato padding verticale e orizzontale */
+    font-size: 1.1rem; /* Aumentata dimensione del testo */
+}
+.search-input:focus {
+    box-shadow: none; background: transparent; color: var(--text-primary);
+}
+.search-select {
+    background-color: transparent; border: none; color: var(--text-primary);
+    padding: 1.1rem 2.5rem 1.1rem 1.5rem; /* Adattato il padding */
+    border-left: 1px solid rgba(127, 90, 240, 0.5);
+    cursor: pointer;
+    -webkit-appearance: none; -moz-appearance: none; appearance: none;
+    width: 180px; /* Aumentata la larghezza */
+    text-align: left;
+    font-size: 1.1rem; /* Aumentata dimensione del testo */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%237F5AF0' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+}
+.search-select option {
+    background-color: var(--background-dark); color: var(--text-primary);
+}
+.search-button {
+    background-color: var(--accent-purple); color: var(--text-primary);
+    border: none; transition: background-color 0.3s;
+    padding: 0 2rem; /* Aumentato padding per allargare il pulsante */
+    font-size: 1.3rem; /* Ingrandisce l'icona della lente */
+}
+.search-button:hover { background-color: var(--accent-cyan); 
+}
+
+
+
+
